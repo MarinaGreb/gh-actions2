@@ -1,0 +1,248 @@
+{
+	"info": {
+		"_postman_id": "b9dd5fb0-7da5-43be-8145-6558acb1cdf4",
+		"name": "santa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "13712655-b9dd5fb0-7da5-43be-8145-6558acb1cdf4"
+	},
+	"item": [
+		{
+			"name": "https://staging.lpitko.ru/api/session",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"id": "d672a376-f4f2-4e26-8233-4fadd2b10131"
+					}
+				}
+			],
+			"id": "34327e72-08bb-4b1f-b6ae-f9a3c3e7e140",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/session",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"session"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://staging.lpitko.ru/api/account",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"id": "6bc9f805-4287-4af3-b395-b74108bb2ccc"
+					}
+				}
+			],
+			"id": "5c303689-d88a-48be-8c39-81baf1a145e9",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/account",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"id": "742ebfb9-8cb4-4e94-a5b2-023802a64525",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"sokovets@outlook.com\", \"password\": \"123456\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/account/password",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const reqDate = JSON.parse(request.data)\r",
+							"console.log(request.data)\r",
+							"pm.environment.set(\"password\", reqDate.password);"
+						],
+						"type": "text/javascript",
+						"id": "2f530514-ad7d-4c28-b9e6-514249e93279"
+					}
+				}
+			],
+			"id": "4bf7cee3-ecf4-4996-8896-8517225e46e3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"password\":\"{{$randomPassword}}\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/account/password",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"account",
+						"password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"id": "133002a5-ad0b-44fe-81ca-5bb71f3ebffb"
+					}
+				}
+			],
+			"id": "a0058c20-8697-443f-8d72-7468df3be46f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"sokovets@outlook.com\", \"password\": \"{{password}}\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/account/password Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"id": "88e2135d-991a-499a-a8a2-c974d17b5aa9"
+					}
+				}
+			],
+			"id": "02af2abc-6ee3-432a-8821-d4de24cf91a5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\"password\": \"123456\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/account/password",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"account",
+						"password"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
