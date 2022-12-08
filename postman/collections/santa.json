@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "b9dd5fb0-7da5-43be-8145-6558acb1cdf4",
+		"_postman_id": "f5d86246-3988-4d48-a1b7-e3145ca43dd4",
 		"name": "santa",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "13712655-b9dd5fb0-7da5-43be-8145-6558acb1cdf4"
+		"_uid": "13712655-f5d86246-3988-4d48-a1b7-e3145ca43dd4"
 	},
 	"item": [
 		{
@@ -18,11 +18,11 @@
 							"});"
 						],
 						"type": "text/javascript",
-						"id": "d672a376-f4f2-4e26-8233-4fadd2b10131"
+						"id": "481cdd38-2323-48d4-8e4c-0f0d48b231fe"
 					}
 				}
 			],
-			"id": "34327e72-08bb-4b1f-b6ae-f9a3c3e7e140",
+			"id": "d626f34a-976f-4a10-b64f-a19777a10d47",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -53,11 +53,11 @@
 							"});"
 						],
 						"type": "text/javascript",
-						"id": "6bc9f805-4287-4af3-b395-b74108bb2ccc"
+						"id": "281853a9-0629-4efe-9f78-9eb08e7ba012"
 					}
 				}
 			],
-			"id": "5c303689-d88a-48be-8c39-81baf1a145e9",
+			"id": "57781850-d98c-41be-9ad4-9ac9de0de0aa",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -78,7 +78,7 @@
 		},
 		{
 			"name": "login",
-			"id": "742ebfb9-8cb4-4e94-a5b2-023802a64525",
+			"id": "dcce0a1a-a82a-43fb-aba7-9c372eda7f2e",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -122,11 +122,11 @@
 							"pm.environment.set(\"password\", reqDate.password);"
 						],
 						"type": "text/javascript",
-						"id": "2f530514-ad7d-4c28-b9e6-514249e93279"
+						"id": "bd000c20-d6ed-4b6c-8dd6-9526307e4bc1"
 					}
 				}
 			],
-			"id": "4bf7cee3-ecf4-4996-8896-8517225e46e3",
+			"id": "d8cdae71-f7d3-437d-8101-38c0a386ff13",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -167,11 +167,11 @@
 							"});"
 						],
 						"type": "text/javascript",
-						"id": "133002a5-ad0b-44fe-81ca-5bb71f3ebffb"
+						"id": "3956448b-c083-490e-acfd-b78f522beaad"
 					}
 				}
 			],
-			"id": "a0058c20-8697-443f-8d72-7468df3be46f",
+			"id": "08e3548d-f179-41ee-aebf-f4ec72a28272",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -211,11 +211,11 @@
 							"});"
 						],
 						"type": "text/javascript",
-						"id": "88e2135d-991a-499a-a8a2-c974d17b5aa9"
+						"id": "eec28a08-a8fd-411c-804b-6cbf93970a2a"
 					}
 				}
 			],
-			"id": "02af2abc-6ee3-432a-8821-d4de24cf91a5",
+			"id": "694799e6-9f49-4d1c-95c3-8a52fc1a37e2",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
