@@ -7,41 +7,6 @@
 	},
 	"item": [
 		{
-			"name": "https://staging.lpitko.ru/api/session",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});"
-						],
-						"type": "text/javascript",
-						"id": "481cdd38-2323-48d4-8e4c-0f0d48b231fe"
-					}
-				}
-			],
-			"id": "d626f34a-976f-4a10-b64f-a19777a10d47",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{baseUrl}}/session",
-					"host": [
-						"{{baseUrl}}"
-					],
-					"path": [
-						"session"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "https://staging.lpitko.ru/api/account",
 			"event": [
 				{
@@ -150,6 +115,41 @@
 					"path": [
 						"account",
 						"password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://staging.lpitko.ru/api/session",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"id": "481cdd38-2323-48d4-8e4c-0f0d48b231fe"
+					}
+				}
+			],
+			"id": "d626f34a-976f-4a10-b64f-a19777a10d47",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/session",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"session"
 					]
 				}
 			},
